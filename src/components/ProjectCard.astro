@@ -1,0 +1,47 @@
+---
+import type { Project } from '../data/portfolio';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="flex flex-col gap-2.5 items-start text-left w-full mb-6">
+  <div class="flex flex-row items-center gap-3 flex-wrap">
+    <h4 class="text-lg font-semibold text-white tracking-tight">{project.name}</h4>
+    {project.url && project.url.trim() !== '' && (
+      <a
+        class="text-sm font-medium text-blue-400 hover:underline transition duration-150"
+        href={project.url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Website
+      </a>
+    )}
+    {project.git_link && (
+      <a
+        class="text-sm font-medium text-emerald-400 hover:underline transition duration-150"
+        href={project.git_link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
+    )}
+  </div>
+
+  <p class="text-sm text-zinc-300 leading-relaxed">
+    {project.description}
+  </p>
+
+  <div class="flex flex-row gap-2 flex-wrap pt-1">
+    {project.tags.map((tag) => (
+      <span class="text-xs  border border-x-0 border-y-0 underline decoration-dashed underline-offset-4 decoration-zinc-700 px-2.5 py-1  font-mono">
+        {tag}
+      </span>
+    ))}
+  </div>
+</article>

@@ -1,0 +1,112 @@
+---
+import '../index.css';
+import ProjectCard from '../components/ProjectCard.astro';
+import Contributions from '../components/Contributions.astro';
+import {
+  AgenticProjects,
+  FrontendBackend,
+  MiscProjects,
+  openSourceContributions,
+} from '../data/portfolio';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dinesh Thumma — Portfolio</title>
+    <meta name="description" content="Software Engineer & Systems Builder specializing in Agentic Systems, Graph RAG, and Distributed Architectures." />
+    <link rel="icon" type="image/png" href="/luffy.png" />
+    <link rel="apple-touch-icon" href="/luffy.png" />
+  </head>
+  <body>
+    <div id="root">
+      <main class="w-full flex flex-col items-start text-left">
+        <!-- Intro / Header -->
+        <header class="w-full mb-12">
+          <h1 class="text-5xl font-extrabold tracking-tight text-white mb-4">
+            Dinesh Thumma
+          </h1>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-zinc-400">
+            <a href="mailto:dineshthumma15@gmail.com" class="hover:text-white transition underline">
+              Gmail
+            </a>
+            <span class="text-zinc-600">•</span>
+            <a
+              href="https://github.com/DineshThumma9"
+              target="_blank"
+              rel="noreferrer"
+              class="hover:text-white transition underline"
+            >
+              GitHub
+            </a>
+            <span class="text-zinc-600">•</span>
+            <a href="https://drive.google.com/file/d/1xAjQ2z0wCSF2h9JXX61CTHryl1_it3gT/view?usp=sharing" class="hover:text-white transition underline">
+              Resume
+            </a>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-400">Hyderabad, Telangana, India</span>
+          </div>
+          <div class="flex flex-col mt-4 text-zinc-300">
+            Final Year Grad Intersted in Gen AI and Backend Systems and Open Source 
+            
+          </div>
+        </header>
+
+        <!-- Projects Section -->
+        <section class="w-full mb-16">
+          <h2 class="text-3xl font-bold tracking-tight text-white mb-8 pb-3 border-b border-zinc-800">
+            Projects
+          </h2>
+
+          <div class="mb-10 w-full">
+            <h3 class="text-xl font-semibold text-zinc-200 mb-6">
+              Agentic Systems
+            </h3>
+            <div class="flex flex-col gap-6">
+              {AgenticProjects.map((project) => (
+                <ProjectCard project={project} />
+              ))}
+            </div>
+          </div>
+
+          <div class="mb-10 w-full">
+            <h3 class="text-xl font-semibold text-zinc-200 mb-6">
+              Frontend & Backend
+            </h3>
+            <div class="flex flex-col gap-6">
+              {FrontendBackend.map((project) => (
+                <ProjectCard project={project} />
+              ))}
+            </div>
+          </div>
+
+          <div class="w-full">
+            <h3 class="text-xl font-semibold text-zinc-200 mb-6">
+              Misc. Projects
+            </h3>
+            <div class="flex flex-col gap-6">
+              {MiscProjects.map((project) => (
+                <ProjectCard project={project} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- Open Source Contributions Section -->
+        <section class="w-full mb-12">
+          <h2 class="text-3xl font-bold tracking-tight text-white mb-8 pb-3 border-b border-zinc-800">
+            Open Source Contributions
+          </h2>
+
+          <div class="flex flex-col gap-6">
+            {openSourceContributions.map((contribution) => (
+              <Contributions contribution={contribution} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
