@@ -33,7 +33,7 @@ export const AgenticProjects: Project[] = [
       "Intelligent resume engineering platform that dynamically tailors reusable LaTeX/PDF resumes to specific Job Descriptions. Integrates the Monaco editor for live fine-tuning, cloud persistence, and section-level privacy masking for community feedback on Reddit.",
     tags: ["AI Agents", "Monaco Editor", "LaTeX", "Cloud Storage", "Privacy"],
     git_link: "https://github.com/DineshThumma9/ResumeReworker",
-    url: "https://resumereworker.centralgpt.com",
+    url: "https://resume-reworker.vercel.app/",
   },
   {
     name: "Renvue",
@@ -49,7 +49,7 @@ export const AgenticProjects: Project[] = [
       "Autonomous workflow pipeline that ingests CSVs of product catalogs and brand descriptions, crawls web documents and specs, outputs enriched product data catalogs, and groups pipeline failures for targeted retry and investigation.",
     tags: ["Agentic Workflows", "Data Enrichment", "Python", "ETL", "Cataloging"],
     git_link: "https://github.com/DineshThumma9/UniHack",
-    url: "https://unihack.vercel.app/",
+    url: "https://unihack-enrich.vercel.app/",
   },
 ];
 
