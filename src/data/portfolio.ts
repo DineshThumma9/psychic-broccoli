@@ -39,7 +39,7 @@ export const AgenticProjects: Project[] = [
     name: "Renvue",
     description:
       "Event-driven agentic recovery system that listens to subscription and payment failure webhooks and autonomously orchestrates multi-channel recovery workflows based on user behavior and channel availability.",
-    tags: ["Event-Driven", "Autonomous Agents", "Razorpay", "Fintech", "Webhooks"],
+    tags: ["Event-Driven", "Autonomous Agents", "Fintech", "Webhooks"],
     git_link: "https://github.com/DineshThumma9/Renvue" ,
     url: "https://razor-renvue.vercel.app/",
   },
@@ -73,7 +73,22 @@ export const FrontendBackend: Project[] = [
 ];
 
 export const MiscProjects: Project[] = [
-  
+  {
+    name: "SmartFile Manager",
+    description:
+      "Local-first smart file organizer and MCP server. Semantically clusters documents using local Ollama embeddings, dynamically derives folder taxonomy from content, and provides human-in-the-loop preview and approval workflows before modifying files.",
+    tags: ["MCP", "Ollama", "Local AI", "Python", "Scikit-learn", "CLI"],
+    git_link: "https://github.com/DineshThumma9/SmartFileManager",
+    url: "",
+  },
+  {
+    name: "LibCloud",
+    description:
+      "Visualizes repository dependency ecosystems as interactive SVG/PNG logo clouds. Scans multi-language project manifests, normalizes packages, resolves icons via multi-tier fallback, and renders usage-weighted vector clouds with custom theme presets.",
+    tags: ["React", "FastAPI", "D3.js", "MongoDB", "GitHub API", "Python"],
+    git_link: "https://github.com/DineshThumma9/LibCloud",
+    url: "",
+  },
   {
     name: "Medium Freedium",
     description:
@@ -93,6 +108,17 @@ export const MiscProjects: Project[] = [
 ];
 
 export const openSourceContributions: Contribution[] = [
+  {
+    repo_name: "zauberzeug/nicegui",
+    created_date: "2026-08-15",
+    merged_date: "2026-11-13",
+    pr_id: "#6289",
+    pr_url: "https://github.com/zauberzeug/nicegui/pull/6289",
+    repo_url: "https://github.com/zauberzeug/nicegui",
+    issue: "Fixes #6170",
+    description:
+      "Prevented infinite reconnection popup hangs on expired auth sessions by probing endpoints with manual redirects to detect auth walls vs network outages.",
+  },
   {
     repo_name: "zauberzeug/nicegui",
     created_date: "2026-08-15",
